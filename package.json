@@ -1,0 +1,54 @@
+{
+  "name": "my-stock-dashboard",
+  "version": "1.0.0",
+  "description": "MEAN application that holds stock dashboard information for various users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexander-r-arnold/MyStockDashboard.git"
+  },
+  "keywords": [
+    "stock",
+    "mean",
+    "express",
+    "angular",
+    "node",
+    "js",
+    "mongodb",
+    "dashboard"
+  ],
+  "author": "Alexander Arnold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexander-r-arnold/MyStockDashboard/issues"
+  },
+  "homepage": "https://github.com/alexander-r-arnold/MyStockDashboard#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "gulp": "^3.9.1",
+    "http": "0.0.0",
+    "mongodb": "^2.2.4",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.5.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-nodemon": "^2.1.0",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "wiredep": "^4.0.0"
+  }
+}
