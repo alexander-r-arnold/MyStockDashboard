@@ -7,8 +7,6 @@ var aboutRouter = express.Router();
 var router = function(){
 
 	aboutRouter.get('/', function(req, res) {
-		console.log(res);
-		console.log(req);
 		res.render('about');
 	});
 	
