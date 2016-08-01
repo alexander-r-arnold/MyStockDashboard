@@ -1,6 +1,7 @@
 // require packages
 var express = require('express');
 var mongoose = require('mongoose');
+var xml2js = require('xml2js');
 
 var dashboardRouter = express.Router();
 
