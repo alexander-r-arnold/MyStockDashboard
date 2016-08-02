@@ -2,6 +2,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var http = require('http');
+var xml2js = require('xml2js');
+var parser = xml2js.Parser({explicitArray: false});
 
 // declare application
 var app = express();
@@ -28,6 +31,23 @@ app.use('/about', aboutRouter);
 
 // init '/' route
 app.get('/', function(req, res) {
+	var options = {
+			host: 'http://dev.markitondemand.com/Api/v2/Lookup',
+			path: '/Lookup?input=' + 'AAPL'
+		};
+	var callback = function(response) {
+		var str = '';
+		response.on('data', function(chunk) {
+			str += chunk;
+		});
+		response.on('end', function() {
+			console.log(str);
+			parser.parseString(str, function(err, result) {
+				cb(null, result.LookupResponseList);
+			});
+		});
+	};
+	http.request(options, callback).end();
 	res.render('index');
 });
 
