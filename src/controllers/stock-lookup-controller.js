@@ -1,4 +1,4 @@
-var stockLookupController = function(stockLookupService, nav) {
+var stockLookupController = function(stockLookupService) {
 	
 	var middleware = function(req, res, next) {
 		next();
@@ -6,8 +6,14 @@ var stockLookupController = function(stockLookupService, nav) {
 
 	// gets the home page of books by retrieving all books
 	var getInput = function(req, res) {
-		res.render('stockLookupView');
-	};d
+		var stuff = stockLookupService.getStockByInput();
+
+		var options = {
+			data: stuff
+		};
+
+		res.render('about', options);
+	};
 
 	return {
 		middleware: middleware,
@@ -15,4 +21,4 @@ var stockLookupController = function(stockLookupService, nav) {
 	};
 };
 
-module.exports = stockLookupControllerController;
+module.exports = stockLookupController;
